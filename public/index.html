@@ -11,12 +11,12 @@
     </head>
 
     <body>
-        <div class="wrapper">
-            <div class="container text-center col-md-12 head">
+        <div class="wrapper text-center">
+            <div class="container col-md-12 head">
                 <img src="/assets/img/logo.png" alt="logo">
             </div>
             
-            <div class="container col-md-12 text-center lead">
+            <div class="container col-md-12 lead">
                 <h1>It's not just a bag, it's your reflection!</h1>
                 <p>
                     We are creating a perfect bag just for you!
@@ -24,10 +24,11 @@
                 <p>
                     In the next future we will present an exclusive customized leather bags with the use of premium quality materials and craftsmanship. 
                 </p>
-            </div>    
-        
+            </div>
+
             <div class="container main">
-                <div class="row text-center">
+                <h1>What is your bag for you?</h1>
+                <div class="row">
                     <div class="col-md-4">
                         <img src="/assets/img/1.png" alt="bag-is-1">
                     </div>
@@ -39,16 +40,53 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="container footer text-center">
-            <p class="footer-caption">
-                Born in Madrid
-            </p>
+            <div class="container form-subscribe">
+                <p>We are launching soon at Kickstarter.</p>
+                <p>Please give us your email if you want to get notified when we are launching.</p>
+
+                <form action="#" class="form-inline" id="js-subscribe-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="js-subscribe-email" type="email" class="form-control" name="email" placeholder="joe@example.com">
+                        <button type="submit" class="btn btn-default">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="container" id="js-share-buttons">
+                <div class="social-likes">
+                    <div class="facebook" title="Share via Facebook">Facebook</div>
+                    <div class="twitter" data-via="@etalonbag" title="Share via Twitter">Twitter</div>
+                    <div class="vkontakte" title="Share via Vkontakte">Vkontakte</div>
+                    <div class="plusone" title="Share via Google Plus">Google+</div>
+                </div>
+            </div>
+
+            <div class="container footer">
+                <p class="footer-caption">
+                    Born in Madrid
+                </p>
+            </div>
         </div>
     </body>
 
-    <script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="/components/social-likes/social-likes.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            mixpanel.track('Launch Page visited');
 
+            var $shareButtons = $('#js-share-buttons');
+            var $subscribeForm = $('#js-subscribe-form');
+            var $subscribeEmail = $('#js-subscribe-email');
+
+            $subscribeForm.on('submit', function(e) {
+                e.preventDefault();
+                console.log($subscribeEmail.val());
+                mixpanel.identify($subscribeEmail.val());
+                mixpanel.people.set({$email: $subscribeEmail.val()});
+            });
+        });
     </script>
 </html>
