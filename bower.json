@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "bootstrap": "~3.3.2",
-    "social-likes": "~3.0.13"
+    "social-likes": "~3.0.13",
+    "fontawesome": "~4.3.0"
   }
 }

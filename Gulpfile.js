@@ -10,6 +10,6 @@ gulp.task('less', function() {
         .pipe(notify('Less complied'));
 });
 
-gulp.task('watch:less', ['less'], function() {
-   gulp.watch('./public/less/**/*.less', ['less']); 
+gulp.task('watch', ['less'], function() {
+   gulp.watch('./public/**/*.less', ['less']);
 });
