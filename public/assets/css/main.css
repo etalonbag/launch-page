@@ -6887,21 +6887,24 @@ button.close {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAQAAADV/FywAAAAvklEQVQYGQXBsUoUAACA4f/i8MBB0TdINCQQhHoDaXRzagkkopYGhRYfwKWhSYLDZ2ixNyiTVp1cXMQgaDpNsa6v70vy3DcTt34ZeyRlaIzPXnvpAy6tK2+wIwuSZ/75Yphz3+XQjS3JVzwOe0Z+463kCBu58dHIT/fW5IEzUys58NeqK6eSJ/44NZM5r2yaurTkoRNsK8kuLlybYt9AycAnd5a98M5TScmsH44lSVIyb2JbkiSDZNF7I0mS9B8IOsS5z/yrNgAAAABJRU5ErkJggg==");
 }
 /** Page Partial */
+.js-fade-in {
+  opacity: 0;
+}
 body {
   background-color: #FDF6F2;
 }
 #wrapper {
   max-width: 900px;
   background-color: white;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 42px;
+  padding-bottom: 42px;
   -webkit-box-shadow: 0px 0px 11px 0px rgba(50, 50, 50, 0.5);
   -moz-box-shadow: 0px 0px 11px 0px rgba(50, 50, 50, 0.5);
   box-shadow: 0px 0px 11px 0px rgba(50, 50, 50, 0.5);
 }
 @media (min-width: 768px) {
   #wrapper {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 55px;
+    margin-bottom: 55px;
   }
 }
