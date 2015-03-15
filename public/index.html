@@ -23,11 +23,15 @@
                 <p class="logo-caption">
                     Born in Madrid
                 </p>
+
+                <h1 id="lead-heading">It's not just a bag, it's your reflection!</h1>
+
+
+                <br/><br/><br/>
+                <img src="/assets/img/d.png" width="70%" alt="women">
             </section>
 
             <section id="lead">
-                <h1 id="lead-heading">It's not just a bag, it's your reflection!</h1>
-
                 <p>We are creating the perfect bag just for you!</p>
 
                 <br/>
@@ -83,12 +87,12 @@
             var time = 0;
             $(window).scroll(function() {
                 $('.js-fade-in').each(function(i) {
-                    var bottomOfObject = $(this).offset().top + $(this).outerHeight();
-                    var bottomOfWindow = $(window).scrollTop() + $(window).height();
+                    var imageBottom = $(this).offset().top + $(this).outerHeight();
+                    var windowBottom = $(window).scrollTop() + $(window).height();
 
-                    if (bottomOfWindow > bottomOfObject) {
+                    if (windowBottom > imageBottom) {
                         $(this).delay(time).animate({opacity: 1}, 1000);
-                        time += 400;
+                        time += 500;
                     }
                 });
             });
