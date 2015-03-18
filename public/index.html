@@ -10,9 +10,12 @@
         <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="/assets/css/main.css">
-        <!-- start Mixpanel --><script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
-        for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
-        mixpanel.init("e595e12429f8902bc6245fe85878c42e");</script><!-- end Mixpanel -->
+        <!-- Mixpanel -->
+        <script type="text/javascript">
+            (function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+            for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+            mixpanel.init("e595e12429f8902bc6245fe85878c42e");
+        </script>
     </head>
 
     <body>
@@ -24,21 +27,16 @@
                     Born in Madrid
                 </p>
 
-                <h1 id="lead-heading">It's not just a bag, it's your reflection!</h1>
+                <h1 id="slogan">It's not just a bag, it's your reflection!</h1>
 
-
-                <br/><br/><br/>
                 <img src="/assets/img/d.png" width="70%" alt="women">
             </section>
 
             <section id="lead">
-                <p>We are creating the perfect bag just for you!</p>
-
-                <br/>
+                <p>We believe that every woman is unique!</p>
 
                 <p>
-                    We are building exclusive customizing
-                    genuine leather bags, using premium quality materials and craftsmanship.
+                    Using premium quality materials and craftsmanship, we are creating the unique handbag just for you and your lifestyle.
                 </p>
             </section>
 
@@ -53,7 +51,7 @@
             </section>
 
             <section id="form-subscribe">
-                <p>We are launching soon at Kickstarter.</p>
+                <p>We launching soon at Kickstarter.</p>
                 <p>Please give us your email if you want to get notified!</p>
 
                 <form action="#" class="form-inline" id="js-subscribe-form">
@@ -62,7 +60,7 @@
                         <input id="js-subscribe-email" type="email" class="form-control" name="email" placeholder="joe@example.com">
                     </div>
 
-                    <button type="submit" class="btn btn-default">Subscribe</button>
+                    <button type="submit" class="btn btn-default">Notify me!</button>
                 </form>
             </section>
 
@@ -99,12 +97,12 @@
         }
 
         function isValidEmail(email) {
-            var pattern = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
+            var pattern = /[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\.[a-zA-Z]{2,4}/;
             return pattern.test(email);
         }
 
-        $(document).ready(function() {
-            mixpanel.disable();
+        (function() {
+            mixpanel.disable();  // DEBUG!!!!
             mixpanel.track('Page Viewed', {
                 url: window.location.origin
             });
@@ -125,7 +123,8 @@
                 mixpanel.people.set_once({
                     $email: email,
                     $created: new Date(),
-                    lead_origin: window.location.origin
+                    lead_origin: window.location.origin,
+                    lead_description: 'Launch Page'
                 });
                 mixpanel.identify();
 
@@ -133,6 +132,6 @@
                     $('#js-share-buttons').removeClass('hidden');
                 });
             });
-        });
+        })();
     </script>
 </html>

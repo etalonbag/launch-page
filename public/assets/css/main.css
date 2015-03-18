@@ -6917,14 +6917,19 @@ h1 {
     margin-bottom: 60px;
   }
 }
+.logo-caption {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
 #lead {
-  margin-top: 80px;
+  margin-top: 60px;
 }
 #main {
   margin-top: 80px;
 }
-#lead-heading {
-  margin-bottom: 50px;
+#slogan {
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 #bag-is-images {
   margin: 50px 0;
