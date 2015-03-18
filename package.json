@@ -3,5 +3,20 @@
     "gulp": "^3.8.11",
     "gulp-less": "^3.0.1",
     "gulp-notify": "^2.2.0"
-  }
+  },
+
+  "scripts": {
+    "prepare": "npm install && bower install",
+    "less": "gulp less"
+  },
+
+  "gh-pages-deploy": {
+      "staticpath": "public",
+      "cname": "etalonbag.com",
+      "prep": [
+        "prepare",
+        "less"
+      ],
+      "noprompt": false
+    }
 }
