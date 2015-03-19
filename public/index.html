@@ -107,7 +107,9 @@
                 url: window.location.origin
             });
 
-            animateImages();
+            if (document.documentElement.clientWidth > 640) {
+                animateImages();
+            }
 
             $('#js-subscribe-form').submit(function(event) {
                 event.preventDefault();
