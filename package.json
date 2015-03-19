@@ -12,7 +12,7 @@
 
   "gh-pages-deploy": {
       "staticpath": "public",
-      "cname": "etalonbag.com",
+      "cname": "launch.etalonbag.com",
       "prep": [
         "prepare",
         "less"
