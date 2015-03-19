@@ -119,7 +119,6 @@
                     return $(this).addClass('has-error');
                 }
 
-                mixpanel.track('Email Provided', {email: email});
                 mixpanel.people.set_once({
                     $email: email,
                     $created: new Date(),
