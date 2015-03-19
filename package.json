@@ -1,12 +1,16 @@
 {
   "devDependencies": {
+    "bower": "^1.3.12",
     "gulp": "^3.8.11",
     "gulp-less": "^3.0.1",
     "gulp-notify": "^2.2.0",
     "http-server": "^0.7.5"
   },
-  "scripts": {    
-    "start": "npm install && ./node_modules/.bin/http-server public"
+  "scripts": {
+    "start": "npm install && npm run bower && npm run gulp && npm run server",
+    "bower": "./node_modules/.bin/bower install",
+    "gulp": "./node_modules/.bin/gulp",
+    "server": "./node_modules/.bin/http-server public"
   },
   "gh-pages-deploy": {
     "staticpath": "public",
