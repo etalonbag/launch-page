@@ -5,9 +5,8 @@
     "gulp-notify": "^2.2.0",
     "http-server": "^0.7.5"
   },
-  "scripts": {
-    "prepare": "npm install && bower install",
-    "less": "gulp less"
+  "scripts": {    
+    "start": "npm install && bower install && gulp less && http-server public"
   },
   "gh-pages-deploy": {
     "staticpath": "public",
