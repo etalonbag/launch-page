@@ -3228,8 +3228,8 @@ fieldset[disabled] .btn-warning.active {
 }
 .btn-danger {
   color: #ffffff;
-  background-color: #d9534f;
-  border-color: #d43f3a;
+  background-color: #fd6166;
+  border-color: #fd484e;
 }
 .btn-danger:hover,
 .btn-danger:focus,
@@ -3238,8 +3238,8 @@ fieldset[disabled] .btn-warning.active {
 .btn-danger.active,
 .open > .dropdown-toggle.btn-danger {
   color: #ffffff;
-  background-color: #c9302c;
-  border-color: #ac2925;
+  background-color: #fc2f35;
+  border-color: #fc0b13;
 }
 .btn-danger:active,
 .btn-danger.active,
@@ -3264,11 +3264,11 @@ fieldset[disabled] .btn-danger:active,
 .btn-danger.disabled.active,
 .btn-danger[disabled].active,
 fieldset[disabled] .btn-danger.active {
-  background-color: #d9534f;
-  border-color: #d43f3a;
+  background-color: #fd6166;
+  border-color: #fd484e;
 }
 .btn-danger .badge {
-  color: #d9534f;
+  color: #fd6166;
   background-color: #ffffff;
 }
 .btn-link {
@@ -4762,11 +4762,11 @@ a.label:focus {
   background-color: #ec971f;
 }
 .label-danger {
-  background-color: #d9534f;
+  background-color: #fd6166;
 }
 .label-danger[href]:hover,
 .label-danger[href]:focus {
-  background-color: #c9302c;
+  background-color: #fc2f35;
 }
 .badge {
   display: inline-block;
@@ -5031,7 +5031,7 @@ a.thumbnail.active {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 .progress-bar-danger {
-  background-color: #d9534f;
+  background-color: #fd6166;
 }
 .progress-striped .progress-bar-danger {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -6886,7 +6886,6 @@ button.close {
 .social-likes__widget_pinterest:focus .social-likes__icon_pinterest {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAQAAADV/FywAAAAvklEQVQYGQXBsUoUAACA4f/i8MBB0TdINCQQhHoDaXRzagkkopYGhRYfwKWhSYLDZ2ixNyiTVp1cXMQgaDpNsa6v70vy3DcTt34ZeyRlaIzPXnvpAy6tK2+wIwuSZ/75Yphz3+XQjS3JVzwOe0Z+463kCBu58dHIT/fW5IEzUys58NeqK6eSJ/44NZM5r2yaurTkoRNsK8kuLlybYt9AycAnd5a98M5TScmsH44lSVIyb2JbkiSDZNF7I0mS9B8IOsS5z/yrNgAAAABJRU5ErkJggg==");
 }
-/** Page Partial */
 p {
   font-size: 20px;
   font-family: Sanchez;
@@ -6901,14 +6900,17 @@ p {
   -moz-box-shadow: 0px 0px 11px 0px rgba(50, 50, 50, 0.5);
   box-shadow: 0px 0px 11px 0px rgba(50, 50, 50, 0.5);
 }
+.emphasis {
+  font-size: 22px;
+  text-decoration: dotted 1px;
+}
 h1 {
   font-family: "Kaushan Script";
 }
 #wrapper {
   max-width: 900px;
   background-color: white;
-  padding-top: 39px;
-  padding-bottom: 50px;
+  padding: 39px 30px 50px;
   -webkit-box-shadow: 0px 0px 11px 0px rgba(50, 50, 50, 0.5);
   -moz-box-shadow: 0px 0px 11px 0px rgba(50, 50, 50, 0.5);
   box-shadow: 0px 0px 11px 0px rgba(50, 50, 50, 0.5);
@@ -6927,20 +6929,17 @@ h1 {
   margin-top: 60px;
 }
 #main {
-  margin-top: 80px;
+  margin-top: 50px;
 }
 #slogan {
   margin-top: 70px;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 }
 #bag-is-images {
   margin: 50px 0;
 }
-#form-subscribe form {
-  margin-top: 50px;
-}
-.social-likes {
-  margin-top: 25px;
+.lead-text {
+  margin: 40px 0;
 }
 #footer {
   margin-top: 30px;

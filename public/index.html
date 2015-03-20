@@ -24,24 +24,27 @@
                 <img src="/assets/img/logo.png" alt="logo">
 
                 <p class="logo-caption">
-                    Born in Madrid
+                    <em>Born in Madrid</em>
                 </p>
+            </section>
 
+            <section id="lead">
                 <h1 id="slogan">It's not just a bag, it's your reflection!</h1>
+
+                <div class="lead-text">
+                    <p>
+                        Exclusive customized leather bags of premium quality materials and craftsmanship
+                        from the heart of leather industry in Spain.
+                    </p>
+
+                    <p>Now we are creating the perfect bag for you!</p>
+                </div>
 
                 <img src="/assets/img/d.png" width="70%" alt="women">
             </section>
 
-            <section id="lead">
-                <p>We believe that every woman is unique!</p>
-
-                <p>
-                    Using premium quality materials and craftsmanship, we are creating the unique handbag just for you and your lifestyle.
-                </p>
-            </section>
-
             <section id="main">
-                <h1>What is your bag for you?</h1>
+                <h1>What is your perfect bag?</h1>
 
                 <div class="row" id="bag-is-images">
                     <img class="img-responsive center-block col-md-4 js-fade-in" src="/assets/img/1.png" alt="bag-is-1">
@@ -51,16 +54,15 @@
             </section>
 
             <section id="form-subscribe">
-                <p>We launching soon at Kickstarter.</p>
-                <p>Please give us your email if you want to get notified!</p>
+                <p class="lead-text emphasis">Soon on Kickstarter!</p>
 
                 <form action="#" class="form-inline" id="js-subscribe-form">
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email"></label>
                         <input id="js-subscribe-email" type="email" class="form-control" name="email" placeholder="joe@example.com">
                     </div>
 
-                    <button type="submit" class="btn btn-default">Notify me!</button>
+                    <button type="submit" class="btn btn-danger">Notify me!</button>
                 </form>
             </section>
 
@@ -76,9 +78,7 @@
             </section>
         </div>
     </body>
-
-
-    <!-- <script type="text/javascript" src="/components/jquery/dist/jquery.min.js"></script> -->
+    
     <script type="text/javascript" src="/assets/bundle.js"></script>
     <script type="text/javascript">
         function animateImages() {
@@ -102,7 +102,6 @@
         }
 
         (function() {
-            mixpanel.disable();  // DEBUG!!!!
             mixpanel.track('Page Viewed', {
                 url: window.location.origin
             });
