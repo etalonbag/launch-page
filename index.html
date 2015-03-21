@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Soon | Etalon</title>
+
+        <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/assets/css/main.css">
+        <!-- Mixpanel -->
+        <script type="text/javascript">
+            (function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+            for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+            mixpanel.init("e595e12429f8902bc6245fe85878c42e");
+        </script>
+    </head>
+
+    <body>
+        <div class="container text-center" id="wrapper">
+            <section id="logo">
+                <img src="/assets/img/logo.png" alt="logo">
+
+                <p class="logo-caption">
+                    <em>Born in Madrid</em>
+                </p>
+            </section>
+
+            <section id="lead">
+                <h1 id="slogan">It's not just a bag, it's your reflection!</h1>
+
+                <div class="lead-text">
+                    <p>
+                        Exclusive customized leather bags of premium quality materials and craftsmanship
+                        from the heart of leather industry in Spain.
+                    </p>
+
+                    <p>We are creating the perfect bag for you!</p>
+                </div>
+
+                <img src="/assets/img/d.png" width="70%" alt="women">
+            </section>
+
+            <section id="main">
+                <h1>What is your perfect bag?</h1>
+
+                <div class="row" id="bag-is-images">
+                    <img class="img-responsive center-block col-md-4 js-fade-in" src="/assets/img/1.png" alt="bag-is-1">
+                    <img class="img-responsive center-block col-md-4 js-fade-in" src="/assets/img/2.png" alt="bag-is-2">
+                    <img class="img-responsive center-block col-md-4 js-fade-in" src="/assets/img/3.png" alt="bag-is-3">
+                </div>
+            </section>
+
+            <section id="form-subscribe">
+                <p class="lead-text emphasis">Soon on Kickstarter!</p>
+
+                <form action="#" class="form-inline" id="js-subscribe-form">
+                    <div class="form-group">
+                        <label for="email"></label>
+                        <input id="js-subscribe-email" type="email" class="form-control" name="email" placeholder="joe@example.com">
+                    </div>
+
+                    <button type="submit" class="btn btn-danger">Notify me!</button>
+                </form>
+            </section>
+
+            <section class="hidden" id="js-share-buttons">
+                <p>Thank you! Meanwhile you can spread the word about us.</p>
+
+                <div class="social-likes">
+                    <div class="facebook" title="Share via Facebook">Facebook</div>
+                    <div class="twitter" data-via="@etalonbag" title="Share via Twitter">Twitter</div>
+                    <div class="vkontakte" title="Share via Vkontakte">Vkontakte</div>
+                    <div class="plusone" title="Share via Google Plus">Google+</div>
+                </div>
+            </section>
+        </div>
+    </body>
+
+    <script type="text/javascript" src="/assets/bundle.js"></script>
+    <script type="text/javascript">
+        function animateImages() {
+            var time = 0;
+            $(window).scroll(function() {
+                $('.js-fade-in').each(function(i) {
+                    var imageBottom = $(this).offset().top + $(this).outerHeight();
+                    var windowBottom = $(window).scrollTop() + $(window).height();
+
+                    if (windowBottom > imageBottom) {
+                        $(this).delay(time).animate({opacity: 1}, 1000);
+                        time += 500;
+                    }
+                });
+            });
+        }
+
+        function isValidEmail(email) {
+            var pattern = /[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\.[a-zA-Z]{2,4}/;
+            return pattern.test(email);
+        }
+
+        (function() {
+            mixpanel.track('Page Viewed', {
+                url: window.location.origin
+            });
+
+            if (document.documentElement.clientWidth > 640) {
+                animateImages();
+            }
+
+            $('#js-subscribe-form').submit(function(event) {
+                event.preventDefault();
+
+                var email = $('#js-subscribe-email').val();
+
+                if (!isValidEmail(email)) {
+                    $(this).addClass('has-error');
+                    return $(this).addClass('has-error');
+                }
+
+                mixpanel.people.set_once({
+                    $email: email,
+                    $created: new Date(),
+                    lead_origin: window.location.origin,
+                    lead_description: 'Launch Page'
+                });
+                mixpanel.identify();
+
+                $('#form-subscribe').fadeOut(function() {
+                    $('#js-share-buttons').removeClass('hidden');
+                });
+            });
+        })();
+    </script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-60784920-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</html>
